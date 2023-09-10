@@ -1,0 +1,262 @@
+html {
+  background-color: #E4E9F4; /* Replace with your desired color value */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#body{
+  /* font-family: 'Lato', sans-serif; */
+  background: #fff;
+  /* width: 50; */
+  min-height: 100vh;
+  margin-left: 6rem; 
+  margin-right: 3.5rem; 
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Utility */
+.container{
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  overflow: hidden;
+  /* position: i;
+  top: auto; /* Adjust this value to set the y-axis position */
+  /*left: auto; */
+}
+
+.edit{
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  /* padding: 5px; */
+  background: #000;
+  color: #fff;
+  font-size: 0.55rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.delete{
+  position: absolute;
+  top: 0;
+  right: 15px;
+  /* padding: 5px; */
+  background: #fff;
+  color: #ffc972;
+  font-size: 0.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 100%;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 35px;
+}
+
+/* .edit i{
+  border-radius: 50%;
+} */
+
+.date {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  padding: 5px;
+  font-size: 12px;
+  color: A4A3A4;
+}
+
+a{
+  text-decoration: none;
+  display: flex;
+  color: #A4A3A4;
+}
+
+
+.navbar-brand{
+  position: absolute;
+  color: #000;
+  left: 7.5%;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.searchIcon{
+  margin-left: 2.5rem;
+  /* color: #A4A3A4; */
+  color: #000;
+  opacity: 0.5;
+  font-size: 1.5rem;
+  padding-top: 6.5px;
+  padding-right: 3px;
+}
+
+.searchInput{
+  padding-left: 10px; /* Add padding to the left side */
+  padding-right: 10px; /* Add padding to the right side */
+  width: 100%;
+  height: 2.3rem;
+  border: 1px solid #E4E9F4; /* Add a border for visual separation */
+  border-radius: 100px; /* Add rounded corners for a nicer look */
+  font-size: 16px; /* Set the font size */
+  background: #E4E9F4;
+}
+
+
+h5{
+  font-size: 1.2rem;
+  padding-left: 5px;
+}
+
+
+.addIcon{
+  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-left: 4.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  /* color: #fff;
+  background: #000;
+  background-size: 3px;
+  border-radius: 100%; */
+}
+
+#side_content{
+justify-content: left;
+overflow: hidden;
+position: absolute;
+top: 6rem;
+left: 4rem;
+}
+
+.vertical-line {
+  width: 1px; /* Adjust the width as needed */
+  height: 100vh; /* Adjust the height as needed */
+  background-color: #999; /* Set the line color */
+  position: absolute;
+  overflow: hidden;
+  border-width: 0.5px;
+  left: 15%; /* Position the line horizontally in the center */
+  /* transform: translateX(50%); Adjust to center the line */
+}
+
+/* The color dropper */
+.fill{
+  margin-left: 5.25rem;
+  margin-top: 1rem;
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-20px); /* Initial position*/
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fill.visible{
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Final position */
+}
+
+.first-color{
+  color: #ffc972;
+}
+.second-color{
+  color: #ff9b73;
+}
+.third-color{
+  color: #b692fe;
+}
+.fourth-color{
+  color: #e4ee90;
+}
+.fifth-color{
+  color: #01d4ff;
+}
+
+/* searchIcon */
+
+/* .searchIcon{
+  display: flex;
+  padding-left: 15rem;
+  padding-top: 100px;
+  margin-top: 100px;
+  color: #A4A3A4;
+  opacity: 0.5;
+  padding: 5rem;
+} */
+
+.searchIcon .material-icons{
+  font-size: 1rem;
+  padding-top: 0.2rem;
+}
+
+.note-card{
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 250px;
+  min-height: 250px; /* Minimum height */
+  overflow: auto;
+  margin: 20px;
+  background: #ffc972;
+  /*margin-top: 3rem; /* Match the margin-top value of addIcon */
+}
+
+/* .articles-container > *:first-child{
+  background: #b692fe;
+} */
+
+.first {
+  background: #b692fe;
+}
+
+.first .delete{
+  color:  #b692fe;
+}
+
+h2 {
+  position: absolute;
+  margin-bottom: 10px;
+  top: 12.5rem;
+  left: 18rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#home-articles .articles-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+  position: absolute;
+  top: 250px; /* Adjust this value to set the y-axis position */
+  left: 16.9rem; /* Adjust to the left or right as you wish*/
+  align-items: flex-start;
+}
+
+#main-div{
+  background: #fff;
+  top: 0;
+}
+
+#main-div .container{
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
